@@ -1,0 +1,99 @@
+/* Estilos próprios — complementam o Bootstrap 5. */
+:root {
+  --app-primaria: #0b5d6b;
+  --app-primaria-escura: #084652;
+  --bs-primary: #0b5d6b;
+  --bs-primary-rgb: 11, 93, 107;
+  --bs-link-color: #0b5d6b;
+  --bs-link-color-rgb: 11, 93, 107;
+  --bs-link-hover-color: #084652;
+}
+
+body {
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--app-primaria);
+  --bs-btn-border-color: var(--app-primaria);
+  --bs-btn-hover-bg: var(--app-primaria-escura);
+  --bs-btn-hover-border-color: var(--app-primaria-escura);
+  --bs-btn-active-bg: var(--app-primaria-escura);
+  --bs-btn-disabled-bg: var(--app-primaria);
+  --bs-btn-disabled-border-color: var(--app-primaria);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--app-primaria);
+  --bs-btn-border-color: var(--app-primaria);
+  --bs-btn-hover-bg: var(--app-primaria);
+  --bs-btn-hover-border-color: var(--app-primaria);
+  --bs-btn-active-bg: var(--app-primaria-escura);
+}
+
+.navbar-app {
+  background: var(--app-primaria);
+}
+
+.card {
+  border: 0;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+}
+
+/* Indicadores do painel */
+.kpi .valor {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.kpi .rotulo {
+  color: var(--bs-secondary-color);
+  font-size: 0.875rem;
+}
+.kpi.borda-alto { border-left: 4px solid var(--bs-danger) !important; }
+.kpi.borda-atencao { border-left: 4px solid var(--bs-warning) !important; }
+
+/* Gráfico simples de presenças por semana (sem biblioteca) */
+.barras {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 120px;
+}
+.barras .coluna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  font-size: 0.75rem;
+  color: var(--bs-secondary-color);
+}
+.barras .barra {
+  width: 100%;
+  background: var(--app-primaria);
+  border-radius: 3px 3px 0 0;
+  min-height: 2px;
+}
+.barras .barra.recente {
+  background: #2a9d8f;
+}
+
+.fatores li + li {
+  margin-top: 0.35rem;
+}
+
+.tela-acesso {
+  max-width: 440px;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+code.codigo-convite {
+  word-break: break-all;
+  user-select: all;
+}
