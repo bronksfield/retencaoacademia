@@ -17,7 +17,23 @@ com o banco de dados. O esquema inicial do banco foi criado com as tabelas princ
 |---|---|
 | Front-end | HTML5, CSS3, Bootstrap 5.3 e Bootstrap Icons |
 | Banco de dados | PostgreSQL (Supabase) |
+| Comunicação com o banco (próxima etapa) | JavaScript no navegador com a biblioteca `supabase-js` |
+| Segurança dos dados | RLS (Row Level Security) no próprio banco |
 | Versionamento | Git / GitHub |
+
+## Arquitetura
+
+O sistema não terá backend próprio. O JavaScript, rodando no navegador, vai se
+comunicar diretamente com o Supabase, que oferece autenticação e uma API pronta
+sobre o PostgreSQL. As regras de acesso ficam no banco, com RLS: cada usuário só
+consegue ler e alterar os dados da própria academia.
+
+```
+Navegador (HTML + CSS + JavaScript) ──supabase-js──▶ Supabase
+                                                     ├─ Auth (login)
+                                                     ├─ API REST
+                                                     └─ PostgreSQL + RLS
+```
 
 ## Estrutura
 
@@ -45,10 +61,10 @@ Abra o arquivo `index.html` no navegador. Ele leva à tela de login, e o botão
 
 ## Próximos passos
 
-1. Ligar as telas ao banco (Supabase) e implementar o login.
+1. Ligar as telas ao Supabase com JavaScript (`supabase-js`) e implementar o login.
 2. Cadastro de alunos, planos e registro de frequência funcionando.
 3. Regras de análise de frequência e classificação do nível de atenção.
-4. Perfis de usuário (gestor e funcionário) e regras de acesso no banco.
+4. Perfis de usuário (gestor e funcionário) e políticas de RLS no banco.
 5. Tabela e registro de intervenções.
 6. Testes.
 7. Integração com IA para sugestões de reengajamento.
