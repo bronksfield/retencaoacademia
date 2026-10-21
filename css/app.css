@@ -1,4 +1,4 @@
-/* Estilos próprios — complementam o Bootstrap 5. */
+
 :root {
   --app-primaria: #0b5d6b;
   --app-primaria-escura: #084652;
@@ -40,7 +40,7 @@ body {
   box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
 }
 
-/* Indicadores do painel */
+
 .kpi .valor {
   font-size: 1.9rem;
   font-weight: 600;
@@ -53,7 +53,7 @@ body {
 .kpi.borda-alto { border-left: 4px solid var(--bs-danger) !important; }
 .kpi.borda-atencao { border-left: 4px solid var(--bs-warning) !important; }
 
-/* Gráfico simples de presenças por semana (sem biblioteca) */
+
 .barras {
   display: flex;
   align-items: flex-end;
