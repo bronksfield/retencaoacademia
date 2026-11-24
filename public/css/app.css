@@ -1,0 +1,354 @@
+:root {
+  --app-primaria: #6d4ae0;
+  --app-primaria-escura: #5536c4;
+  --app-fundo: #f1eefa;
+  --app-texto: #241f3a;
+  --app-suave: #5f5a78;
+  --app-lilas: #ece7fd;
+  --app-borda: #ebe6f8;
+
+  --bs-body-font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --bs-body-color: #241f3a;
+  --bs-secondary-color: #5f5a78;
+  --bs-primary: #6d4ae0;
+  --bs-primary-rgb: 109, 74, 224;
+  --bs-link-color: #5b3cc4;
+  --bs-link-color-rgb: 91, 60, 196;
+  --bs-link-hover-color: #432a9c;
+  --bs-link-hover-color-rgb: 67, 42, 156;
+  --bs-border-color: #e3ddf5;
+}
+
+body {
+  background: var(--app-fundo);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.titulo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.9rem;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--app-primaria);
+  --bs-btn-border-color: var(--app-primaria);
+  --bs-btn-hover-bg: var(--app-primaria-escura);
+  --bs-btn-hover-border-color: var(--app-primaria-escura);
+  --bs-btn-active-bg: var(--app-primaria-escura);
+  --bs-btn-active-border-color: var(--app-primaria-escura);
+  --bs-btn-disabled-bg: var(--app-primaria);
+  --bs-btn-disabled-border-color: var(--app-primaria);
+}
+
+.btn-suave {
+  background: var(--app-lilas);
+  color: #4b2fb0;
+  border: 0;
+}
+
+.btn-suave:hover {
+  background: #ddd4fb;
+  color: #3b2394;
+}
+
+.form-control,
+.form-select {
+  border-radius: 14px;
+  padding: 0.65rem 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #b9a8f2;
+  box-shadow: 0 0 0 0.25rem rgba(109, 74, 224, 0.18);
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.conteudo {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 4px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--app-texto);
+}
+
+.marca:hover {
+  color: var(--app-texto);
+}
+
+.marca-icone {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--app-primaria);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.sidebar {
+  --bs-offcanvas-width: 270px;
+  border: 0;
+}
+
+.sidebar-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 16px;
+  height: 100%;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  color: var(--app-suave);
+  font-weight: 500;
+}
+
+.menu-link:hover {
+  background: var(--app-fundo);
+  color: var(--app-texto);
+}
+
+.menu-link.ativo {
+  background: var(--app-primaria);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--app-fundo);
+  border-radius: 16px;
+  padding: 14px;
+  font-size: 0.9rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+}
+
+.btn-icone {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: #ffffff !important;
+    border-radius: 24px;
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .layout {
+    padding: 16px 12px;
+  }
+}
+
+.card {
+  border: 0;
+  border-radius: 24px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.kpi {
+  border-radius: 22px;
+  padding: 1.25rem 1.4rem;
+  height: 100%;
+}
+
+.kpi .valor {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 0.4rem;
+}
+
+.kpi .rotulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.kpi-roxo { background: #e4ddfc; color: #3b2394; }
+.kpi-verde { background: #d6f2e8; color: #145c43; }
+.kpi-vermelho { background: #ffe3e3; color: #a61e1e; }
+.kpi-amarelo { background: #fff1cc; color: #7a5200; }
+
+.etiqueta {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.etiqueta-alto { background: #ffe3e3; color: #a61e1e; }
+.etiqueta-atencao { background: #fff1cc; color: #7a5200; }
+.etiqueta-normal,
+.etiqueta-ativo { background: #d6f2e8; color: #145c43; }
+.etiqueta-inativo { background: #ecebf1; color: #4a4760; }
+.etiqueta-cancelado { background: #e2e0ea; color: #2f2c40; }
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--app-lilas);
+  color: #4b2fb0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.avatar-grande {
+  width: 64px;
+  height: 64px;
+  font-size: 1.3rem;
+}
+
+.lista-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--app-borda);
+}
+
+.lista-item:last-child {
+  border-bottom: 0;
+}
+
+.lista-item .nome {
+  font-weight: 600;
+}
+
+.lista-item .detalhe {
+  font-size: 0.85rem;
+  color: var(--app-suave);
+}
+
+.table {
+  --bs-table-bg: transparent;
+  margin-bottom: 0;
+}
+
+.table th {
+  color: var(--app-suave);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-bottom-color: var(--app-borda);
+}
+
+.table td {
+  border-bottom-color: var(--app-borda);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.grafico {
+  position: relative;
+  height: 260px;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.vazio {
+  color: var(--app-suave);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.alert {
+  border: 0;
+  border-radius: 14px;
+}
+
+.tela-acesso {
+  max-width: 420px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 16px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .grafico-alto {
+    height: 400px;
+  }
+}

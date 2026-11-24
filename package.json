@@ -1,0 +1,13 @@
+{
+  "name": "retencao-academia",
+  "version": "1.0.0",
+  "description": "Sistema de Retenção e Reengajamento de Alunos para Academias",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  }
+}
